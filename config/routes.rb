@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  get 'pets/search', to: 'pets#search', as: 'pet_search'
+
   get 'pets', to: 'pets#index', as: 'pets'
+  get 'pets/:id', to: 'pets#show', as: 'pets_show'
+  put 'pets/:id', to: 'pets#update', as: 'pet'
+  delete 'pets/:id', to: 'pets#destroy', as: 'pet_delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
