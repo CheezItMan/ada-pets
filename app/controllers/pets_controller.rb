@@ -1,7 +1,6 @@
 KEYS = [:id, :name, :age, :human]
 
 class PetsController < ApplicationController
-  #protect_from_forgery with: :null_session
 
   def index
     pets = Pet.all.as_json(only: KEYS)
